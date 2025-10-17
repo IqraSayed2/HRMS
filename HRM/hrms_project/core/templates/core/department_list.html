@@ -1,0 +1,66 @@
+<!-- core/templates/core/department_list.html -->
+{% extends 'core/base.html' %}
+{% block title %}Departments - HRMS{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <div>
+    <h2 class="h3 fw-bold text-primary" >Departments</h2>
+    <p class="text-muted">Manage organizational departments</p>
+  </div>
+  <div>
+    {% if user.is_staff %}
+      <a class="btn btn-primary" href="{% url 'core:department_create' %}"><i class="fas fa-plus"></i> Add Department</a>
+    {% endif %}
+  </div>
+</div>
+
+<form method="get" class="mb-3">
+  <div class="input-group">
+    <input name="q" value="{{ q }}" class="form-control" placeholder="Search departments...">
+    <button class="btn btn-outline-secondary">Search</button>
+  </div>
+</form>
+
+{% if departments %}
+  <div class="table-responsive card p-3">
+    <table class="table align-middle">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Created</th>
+          <th class="text-end">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for d in departments %}
+          <tr>
+            <td>{{ d.dept_name }}</td>
+            <td>{{ d.description }}</td>
+            <td>
+              {% if d.status %}
+                <span class="badge bg-success">Active</span>
+              {% else %}
+                <span class="badge bg-secondary">Inactive</span>
+              {% endif %}
+            </td>
+            <td>{{ d.created_at|date:"Y-m-d H:i" }}</td>
+            <td class="text-end">
+              {% if user.is_staff %}
+                <a class="btn btn-sm btn-outline-primary me-1" href="{% url 'core:department_update' d.pk %}">Edit</a>
+                <a class="btn btn-sm btn-outline-danger" href="{% url 'core:department_delete' d.pk %}">Make Inactive</a>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% else %}
+  <div class="card p-4 text-center">
+    <i class="fas fa-layer-group fa-3x text-muted mb-2"></i>
+    <p class="text-muted">No departments found</p>
+  </div>
+{% endif %}
+{% endblock %}

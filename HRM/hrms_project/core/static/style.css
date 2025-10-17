@@ -1,0 +1,288 @@
+/* Login */
+
+/* General Body Styles */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f9fafc;
+  color: #e0e0e0;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main Content Area */
+.rh-login-main-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+/* Form Card Styles */
+.rh-login-card {
+  background-color: #e3e7f0;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  max-width: 650px;
+  width: 100%;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.rh-login-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #070101;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.rh-login-subtitle {
+  font-size: 1.1rem;
+  color: #050101;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.rh-login-form-control {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(15, 10, 10, 0.2);
+  color: #0e0404;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease,
+}
+
+.rh-login-form-control::placeholder {
+  color: #050101;
+}
+
+.rh-login-form-control:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: #4c81af;
+  box-shadow: 0 0 0 0.25rem rgba(76, 104, 175, 0.25);
+  color: #090303;
+}
+
+.rh-login-button {
+  background: linear-gradient(to right, #4c81af, #216488);
+  border: none;
+  color: #070101;
+  border-radius: 0.75rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 5px 15px rgba(40, 123, 167, 0.6);
+}
+
+.rh-login-button:hover {
+  opacity: 0.95;
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 8px 20px rgba(40, 123, 167, 0.6);
+}
+
+.rh-login-signup-link {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #a0a0a0;
+  transition: color 0.3s ease;
+}
+
+.rh-login-signup-link a {
+  color: #4c81af;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.rh-login-signup-link a:hover {
+  text-decoration: underline;
+  color: #4c81af;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  .rh-login-main-content {
+    padding: 1rem 0;
+  }
+  .rh-login-card {
+    padding: 1.5rem;
+  }
+  .rh-login-title {
+    font-size: 1.8rem;
+  }
+  .rh-login-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  .rh-login-button {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+  }
+  .rh-login-signup-link {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* ======================================================================================== */
+
+/* Register */
+
+/* General Body Styles */
+
+
+/* Header Section */
+.rh-signup-header-section {
+  background-color: #e3e7f0;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.rh-signup-header-section h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #060303;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+/* Main Content Area */
+.rh-signup-main-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+/* Form Card Styles */
+.rh-signup-card {
+  background-color: #e3e7f0;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  max-width: 700px;
+  width: 100%;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.rh-signup-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #070202;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.rh-signup-subtitle {
+  font-size: 1.1rem;
+  color: #080101;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.rh-signup-form-control {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(9, 3, 3, 0.2);
+  color: #0c0505;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease,
+}
+
+.rh-signup-form-control::placeholder {
+  color: #060101;
+}
+
+.rh-signup-form-control:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: #4c81af;
+  box-shadow: 0 0 0 0.25rem rgba(76, 104, 175, 0.25);
+  color: #0e0606;
+}
+
+.rh-signup-button {
+  background: linear-gradient(to right, #4c81af, #216488);
+  border: none;
+  color: #080303;
+  border-radius: 0.75rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 5px 15px rgba(40, 123, 167, 0.6);
+}
+
+.rh-signup-button:hover {
+  opacity: 0.95;
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 8px 20px rgba(40, 123, 167, 0.6);
+}
+
+.rh-signup-login-link {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #a0a0a0;
+  transition: color 0.3s ease;
+}
+
+.rh-signup-login-link a {
+  color: #4c81af;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.rh-signup-login-link a:hover {
+  text-decoration: underline;
+  color: #4c81af;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  .rh-signup-header-section h1 {
+    font-size: 1.5rem;
+  }
+  .rh-signup-header-theme-toggle-btn {
+    right: 1rem;
+    font-size: 1rem;
+  }
+  .rh-signup-main-content {
+    padding: 1rem 0;
+  }
+  .rh-signup-card {
+    padding: 1.5rem;
+  }
+  .rh-signup-title {
+    font-size: 1.8rem;
+  }
+  .rh-signup-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  .rh-signup-button {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+  }
+  .rh-signup-login-link {
+    font-size: 0.85rem;
+  }
+}

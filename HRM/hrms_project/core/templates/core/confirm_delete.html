@@ -1,0 +1,14 @@
+<!-- core/templates/core/confirm_delete.html -->
+{% extends 'core/base.html' %}
+{% block content %}
+<div class="card p-4">
+  <h3>Confirm make inactive</h3>
+  <p>You're about to make <strong>{{ object.dept_name }}</strong> inactive. This will also make it inactive for linked employees/managers. Please reassign them before proceeding.</p>
+
+  <form method="post">
+    {% csrf_token %}
+    <a class="btn btn-secondary" href="{% url 'core:department_list' %}">Cancel</a>
+    <button class="btn btn-danger" type="submit">Yes, make inactive</button>
+  </form>
+</div>
+{% endblock %}

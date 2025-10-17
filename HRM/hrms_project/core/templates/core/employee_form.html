@@ -1,0 +1,50 @@
+{% extends 'core/base.html' %}
+{% block title %}{{ title }} - HRMS{% endblock %}
+{% block content %}
+<div class="mb-3 d-flex justify-content-between">
+  <div>
+    <h2>{{ title }}</h2>
+    <p class="text-muted">Add a new employee to your organization.</p>
+  </div>
+  <div>
+    <a class="btn btn-link" href="{% url 'core:dashboard' %}">Back to Dashboard</a>
+  </div>
+</div>
+
+<div class="card p-4">
+  <form method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+
+    <div class="mb-3">
+      <label class="form-label">Employee Name</label>
+      {{ form.name }}
+      {{ form.name.errors }}
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      {{ form.email }}
+      {{ form.email.errors }}
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Department</label>
+      {{ form.department }}
+      {{ form.department.errors }}
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Team</label>
+      {{ form.team }}
+      {{ form.team.errors }}
+    </div>
+
+    <div class="form-check mb-3">
+      {{ form.is_active }} <label class="form-check-label">Active</label>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Save Employee</button>
+  </form>
+</div>
+{% endblock %}

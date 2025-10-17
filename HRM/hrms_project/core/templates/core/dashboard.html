@@ -1,0 +1,75 @@
+{% extends 'core/base.html' %}
+{% block title %}Dashboard - HRMS{% endblock %}
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-start mb-4">
+  <div>
+    <h1 class="h3 fw-bold text-primary">Dashboard</h1>
+    <p class="text-muted mb-0">Overview of your organization's key statistics</p>
+  </div>
+<div>
+  {% if user.is_staff %}
+    <a class="btn btn-primary me-2 mb-2" href="{% url 'core:department_create' %}">
+      <i class="fas fa-plus"></i> Add Department
+    </a>
+    <a class="btn btn-outline-secondary me-2 mb-2" href="{% url 'core:manager_create' %}">
+      <i class="fas fa-user-tie"></i> Add Manager
+    </a>
+    <a class="btn btn-outline-info me-2 mb-2" href="{% url 'core:team_create' %}">
+      <i class="fas fa-users"></i> Add Team
+    </a>
+    <a class="btn btn-outline-success mb-2" href="{% url 'core:employee_create' %}">
+      <i class="fas fa-user-plus"></i> Add Employee
+    </a>
+  {% endif %}
+</div>
+
+</div>
+
+<div class="row g-4">
+
+  <!-- Departments -->
+  <div class="col-12 col-md-6 col-lg-3">
+    <div class="card shadow-sm border-0 rounded-3 text-center p-4">
+      <h6 class="text-secondary mb-1">Total Departments</h6>
+      <h2 class="fw-bold text-primary">{{ total_departments }}</h2>
+      <p class="small text-success mb-0">Active: {{ active_departments }}</p>
+    </div>
+  </div>
+
+  <!-- Employees -->
+  <div class="col-12 col-md-6 col-lg-3">
+    <div class="card shadow-sm border-0 rounded-3 text-center p-4">
+      <h6 class="text-secondary mb-1">Total Employees</h6>
+      <h2 class="fw-bold text-info">{{ total_employees }}</h2>
+      <p class="small text-success mb-0">Active: {{ active_employees }}</p>
+    </div>
+  </div>
+
+  <!-- Teams -->
+  <div class="col-12 col-md-6 col-lg-3">
+    <div class="card shadow-sm border-0 rounded-3 text-center p-4">
+      <h6 class="text-secondary mb-1">Total Teams</h6>
+      <h2 class="fw-bold text-warning">{{ total_teams }}</h2>
+      <p class="small text-success mb-0">Active: {{ active_teams }}</p>
+    </div>
+  </div>
+
+  <!-- Managers -->
+  <div class="col-12 col-md-6 col-lg-3">
+    <div class="card shadow-sm border-0 rounded-3 text-center p-4">
+      <h6 class="text-secondary mb-1">Total Managers</h6>
+      <h2 class="fw-bold text-success">{{ total_managers }}</h2>
+      <p class="small text-success mb-0">Active: {{ active_managers }}</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="mt-4 text-end">
+  <a href="{% url 'core:department_list' %}" class="btn btn-link text-decoration-none">
+    Manage Departments <i class="fas fa-arrow-right"></i>
+  </a>
+</div>
+
+{% endblock %}
