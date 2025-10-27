@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+
+
 urlpatterns = [
     path('start Attendence/',views.InAttendanceView,name="startAttendence"),
     path('outattendce/',views.outAttendanceView,name='outattendence'),

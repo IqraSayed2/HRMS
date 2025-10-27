@@ -4,8 +4,6 @@ from django.contrib.auth.forms import UserCreationForm
 from datetime import time
 
 
-
-
 class Registerform(UserCreationForm):
     SHIFT_CHOICES = [
         (time(6, 0), "06:00 AM"),

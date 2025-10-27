@@ -38,7 +38,6 @@ Rating_choices = [
 
 
 
-
 class Task_Submitted(models.Model):
     Task=models.OneToOneField(Task_Assigned,on_delete=models.CASCADE,unique=True)
     emp=models.ForeignKey(User,on_delete=models.PROTECT,null=False,blank=False,related_name="Task_Submmited_by")

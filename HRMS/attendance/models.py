@@ -43,6 +43,7 @@ class Attendance(models.Model):
 
 
 
+
 class Leave(models.Model):
     emp = models.ForeignKey(User, on_delete=models.PROTECT, related_name="leave_requests", null=False, blank=False)
     date_from = models.DateField(null=False, blank=False)

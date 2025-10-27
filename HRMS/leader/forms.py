@@ -1,6 +1,7 @@
 from django import forms
 from .models import Team,SubTaskAssigned,SubTaskSubmit
 
+
 class CreateTeamFOrm(forms.ModelForm):
     class Meta:
         model=Team

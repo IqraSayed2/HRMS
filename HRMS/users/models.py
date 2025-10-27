@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser,BaseUserManager
 from department.models import Department
 
+
 gender_choice = [
     ("M","Male"),
     ("F","Female"),

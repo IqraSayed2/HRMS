@@ -335,8 +335,6 @@ def monthlyAttendace(request,year,month):
     return redirect('home')
 
 
-
-
 # # work in it sdfghjkl
 # def MonthlyAttedance(request,dept,year,month):
 #     if request.user.role.RoleName=="admin":

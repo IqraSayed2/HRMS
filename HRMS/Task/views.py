@@ -12,7 +12,9 @@ from django.db.models import Q
 from leader.models import Team,SubTaskAssigned,SubTaskSubmit
 from django.db.models import Case, When, Value, IntegerField
 from datetime import date
+
 # Create your views here.
+
 
 @login_required
 def allemp(request):

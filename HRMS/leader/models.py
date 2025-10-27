@@ -3,6 +3,7 @@ from department.models import Department
 from users.models import User, Role
 from django.utils import timezone
 
+
 Rating_choices = [
     (3, 'Bad'),
     (5, 'Average'),

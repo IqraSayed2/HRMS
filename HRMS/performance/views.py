@@ -11,7 +11,6 @@ from users.models import User
 
 
 
-
 def calculate_performance(request,emp, period='monthly'):
         today = date.today()
         if period=='yearly':

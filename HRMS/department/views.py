@@ -43,6 +43,7 @@ class Create_department(View):
             return render(request,'department/form.html',context)
 
 
+
 class updateDepartmentView(View):
     def get(self,request):
         if request.user.role.RoleName != "admin":

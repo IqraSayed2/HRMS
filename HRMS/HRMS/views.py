@@ -23,6 +23,7 @@ def Base_view(request):
 
             }
         return render(request,'base.html',context)
+    
     if request.user.is_authenticated and request.user.role.RoleName=="Manager":
         context={
             "total_task":Task_Assigned.objects.filter(Assigened_by=request.user).count() if Task_Assigned.objects.filter(Assigened_by=request.user).exists() else "0",
@@ -35,6 +36,7 @@ def Base_view(request):
         print('this is the count',context['lpendng'])
 
         return render(request,'base.html',context)
+    
     if request.user.is_authenticated and request.user.role.RoleName=="Team Leader":
         context={
             "total_task":Task_Assigned.objects.filter(emp=request.user).count() if Task_Assigned.objects.filter(emp=request.user).exists() else "No Task Given",

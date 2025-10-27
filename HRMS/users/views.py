@@ -9,6 +9,7 @@ from .models import User,Role
 from attendance.models import AttendanceDetails
 
 
+
 class RegisterView(LoginRequiredMixin,View):
     login_url='login'
     

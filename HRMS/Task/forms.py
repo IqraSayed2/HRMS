@@ -7,8 +7,6 @@ class TaskFOrm(forms.ModelForm):
         fields=['Task','Attachments','deadline']
 
 
-
-
 class SubmitForm(forms.ModelForm):
     class Meta:
         model = Task_Submitted
@@ -22,6 +20,7 @@ class SubmitForm(forms.ModelForm):
                 'accept': '*/*' 
             })
         }
+        
         
 class TeamTaskAssignForm(forms.ModelForm):
     class Meta:

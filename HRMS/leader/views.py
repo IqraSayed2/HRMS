@@ -480,6 +480,7 @@ def View_uploaded_Asign_task(request,pk):
                     return render(request,'leader/v_assign_sub_task.html',context) 
                 messages.error(request,"No Task Submitted")
                 return redirect('AllsubTaskAss')
+      
                   
 
 @login_required
