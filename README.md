@@ -1,6 +1,6 @@
 The HRMS (Human Resource Management System) is a comprehensive web-based platform developed to streamline and automate the core functions of human resource departments. This system offers a centralized solution for managing employee data, assigning tasks, monitoring performance, handling attendance, and processing leave requests — all from a single dashboard.
 
-It supports role-based access control with different functionalities for Admin, Manager, Team Leader, and Employees, ensuring smooth and secure operations.
+It supports role-based access control with different functionalities for Admin, Manager, Team Leader, and Employees, ensuring smooth and secure operations. 
 
 🔑 Key Features:
 Employee Management: Maintain complete records including personal details, department, designation, and employment history.
