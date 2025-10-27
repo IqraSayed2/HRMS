@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure--cbiv=9ol91)^&%m^rke^sc4q&y_)e%vtas+bamwe&#g9(h3ct
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [iqraaa.pythonanywhere.com]
 
 TIME_ZONE = 'Asia/Kolkata'  # Set this to your actual timezone
 USE_TZ = True  # Make sure this is enabled
