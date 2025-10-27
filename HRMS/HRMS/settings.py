@@ -86,39 +86,27 @@ WSGI_APPLICATION = 'HRMS.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-if 'PYTHONANYWHERE_SITE' in os.environ:
-    # Production settings for PythonAnywhere
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'Iqraaa$hrms',
-            'USER': 'Iqraaa',
-            'PASSWORD': 'pythonanywheredb',
-            'HOST': 'Iqraaa.mysql.pythonanywhere-services.com',
-            'PORT': '3306',
-            'OPTIONS': {
-                'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-                'ssl': {'ssl-mode': 'preferred'},  # Add SSL configuration
-            }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'Iqraaa$hrms',  # Database name from my.cnf
+        'USER': 'Iqraaa',  # MySQL username
+        'PASSWORD': 'pythonanywheredb',  # MySQL password
+        'HOST': 'Iqraaa.mysql.pythonanywhere-services.com',  # Use '127.0.0.1' if 'localhost' fails
+        'PORT': '3306',  # Default MySQL port
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         }
     }
-    DEBUG = False
-else:
-    # Local development settings
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'VibgyorHRMS',  # Your local database name
-            'USER': 'root',         # Your local MySQL username
-            'PASSWORD': 'root',      # Your local MySQL password
-            'HOST': 'localhost',
-            'PORT': '3306',
-            'OPTIONS': {
-                'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-            }
-        }
-    }
-    DEBUG = True
+}
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
