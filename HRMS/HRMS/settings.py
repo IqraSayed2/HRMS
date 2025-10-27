@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',\
+    'django.contrib.staticfiles',
     'users',
     'department',
     'Task',
@@ -89,10 +89,10 @@ WSGI_APPLICATION = 'HRMS.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'VibgyorHRMS',  # Database name from my.cnf
-        'USER': 'root',  # MySQL username
-        'PASSWORD': 'root',  # MySQL password
-        'HOST': 'localhost',  # Use '127.0.0.1' if 'localhost' fails
+        'NAME': 'Iqraaa$hrms',  # Database name from my.cnf
+        'USER': 'Iqraaa',  # MySQL username
+        'PASSWORD': 'pythonanywheredb',  # MySQL password
+        'HOST': 'Iqraaa.mysql.pythonanywhere-services.com',  # Use '127.0.0.1' if 'localhost' fails
         'PORT': '3306',  # Default MySQL port
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
